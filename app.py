@@ -72,7 +72,7 @@ def create_map(location=None, zoom_start=13):
 
 
 def main():
-    st.title("🗺️ Simple Maps Application Hai Hahahaha")
+    st.title("🗺️ Simple Maps Application")
 
     # Search box
     search_query = st.text_input("Enter location to search:", "")
@@ -115,7 +115,7 @@ def main():
         # Clear history button
         if st.button("Clear History"):
             st.session_state.search_history = []
-            st.experimental_rerun()
+            st.rerun()  # Updated from experimental_rerun() to rerun()
 
 
 if __name__ == "__main__":
